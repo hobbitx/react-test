@@ -7,6 +7,9 @@ export default function Calculator(distance, starShips) {
 
         return {
             name: element.name,
+            crew: element.crew,
+            passengers: element.passengers,
+            cargo: element.cargo_capacity,
             stops: stop
         }
     })
@@ -14,6 +17,6 @@ export default function Calculator(distance, starShips) {
         return !isNaN(element.stops);
     })
     return calc.sort((a, b) => {
-        return b.stops - a.stops;
+        return a.stops - b.stops;
     });
 }
