@@ -37,5 +37,9 @@ export default async function starShipControl() {
                 console.error(error);
             });
     }
+    let names = starShips.map((element)=>{
+        return element.name;
+    })
+    console.log(names)
     return starShips;
 }

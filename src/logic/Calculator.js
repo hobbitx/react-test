@@ -10,7 +10,8 @@ export default function Calculator(distance, starShips) {
             crew: element.crew,
             passengers: element.passengers,
             cargo: element.cargo_capacity,
-            stops: stop
+            stops: stop,
+            mglt: element.MGLT
         }
     })
     calc = calc.filter((element) => {

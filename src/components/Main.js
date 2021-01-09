@@ -1,15 +1,19 @@
 import starShipControl from "../logic/StarshipsControl";
 import Calculator from "../logic/Calculator";
 import * as React from "react";
-import Button from "@material-ui/core/Button";
+import Loading from "./Loading";
+import ListShips from "./ListShips";
 
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
 class Main extends React.Component {
   constructor() {
     super();
 
     this.state = {
       starShips: [],
-      value: 0,
+      value: null,
       loading: true,
       loadingScreen: "none",
     };
@@ -27,7 +31,9 @@ class Main extends React.Component {
     this.setState({
       loadingScreen: "block",
     });
+
     await this.LoadStartShips();
+    await sleep(3000);
   };
   LoadStartShips = async () => {
     let starShipsAll = await starShipControl();
@@ -44,49 +50,38 @@ class Main extends React.Component {
   }
   render() {
     console.log(this.state.loading);
-    if (this.state.loading === true) {
+    if (this.state.loading) {
       return (
         <React.Fragment>
-          <div>
-            Nome:
+          <div class="ui action input">
             <input
               type="text"
               value={this.state.value}
               onChange={this.handleChange}
+              placeholder="Distance in MGLT:"
             />
+            <div
+              class="ui button"
+              onClick={() => {
+                this.Calculate();
+              }}
+            >
+              Go
+            </div>
           </div>
-          <Button
-            onClick={() => {
-              this.Calculate();
-            }}
-            variant="contained"
-          >
-            Calculate
-          </Button>
           <div
             style={{
               display: this.state.loadingScreen,
             }}
           >
-            <h2>Calculando...</h2>
+            <Loading />
           </div>
         </React.Fragment>
       );
     } else {
       return (
         <React.Fragment>
-          <h1> Starship List </h1>
-          {this.state.starShips.map((starShip) => (
-            <div>
-              <p>Name: {starShip.name} </p>
-              <p>Crew: {starShip.crew}</p>
-              <p>Passengers: {starShip.passengers}</p>
-              <p>Cargo: {starShip.cargo}</p>
-              <p>Stops: {parseInt(starShip.stops)}</p>
-              <hr />
-              <hr />
-            </div>
-          ))}
+          <ListShips starShips={this.state.starShips} />
         </React.Fragment>
       );
     }
