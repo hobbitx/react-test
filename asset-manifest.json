@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/react-test/static/css/main.e3bb008a.chunk.css",
+    "main.js": "/react-test/static/js/main.125ca0da.chunk.js",
+    "main.js.map": "/react-test/static/js/main.125ca0da.chunk.js.map",
+    "runtime-main.js": "/react-test/static/js/runtime-main.e25c3bb7.js",
+    "runtime-main.js.map": "/react-test/static/js/runtime-main.e25c3bb7.js.map",
+    "static/js/2.077a51c7.chunk.js": "/react-test/static/js/2.077a51c7.chunk.js",
+    "static/js/2.077a51c7.chunk.js.map": "/react-test/static/js/2.077a51c7.chunk.js.map",
+    "static/js/3.9b95c0c8.chunk.js": "/react-test/static/js/3.9b95c0c8.chunk.js",
+    "static/js/3.9b95c0c8.chunk.js.map": "/react-test/static/js/3.9b95c0c8.chunk.js.map",
+    "index.html": "/react-test/index.html",
+    "static/css/main.e3bb008a.chunk.css.map": "/react-test/static/css/main.e3bb008a.chunk.css.map",
+    "static/js/2.077a51c7.chunk.js.LICENSE.txt": "/react-test/static/js/2.077a51c7.chunk.js.LICENSE.txt",
+    "static/media/cargo.4f78aa6d.png": "/react-test/static/media/cargo.4f78aa6d.png",
+    "static/media/naboo.a4c4c65b.png": "/react-test/static/media/naboo.a4c4c65b.png",
+    "static/media/people.bc5d20a7.png": "/react-test/static/media/people.bc5d20a7.png",
+    "static/media/rebel.0c35ecfd.png": "/react-test/static/media/rebel.0c35ecfd.png",
+    "static/media/speed.1870c606.png": "/react-test/static/media/speed.1870c606.png",
+    "static/media/stops.8ea8c5e7.png": "/react-test/static/media/stops.8ea8c5e7.png",
+    "static/media/tradeFederation.199ebb16.png": "/react-test/static/media/tradeFederation.199ebb16.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e25c3bb7.js",
+    "static/js/2.077a51c7.chunk.js",
+    "static/css/main.e3bb008a.chunk.css",
+    "static/js/main.125ca0da.chunk.js"
+  ]
+}
